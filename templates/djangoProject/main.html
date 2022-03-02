@@ -40,7 +40,7 @@
 
         .feed_box {
             margin: 20px 0;
-            border: solid 1px gray;
+            border: solid 2px gray;
             background-color: white;
         }
 
@@ -79,7 +79,7 @@
     <div class="container">
         <a href="#"><img style="height: 30px; object-fit: contain"
              src="https://www.instagram.com/static/images/web/mobile_nav_type_logo-2x.png/1b47f9d0e595.png"></a>
-        <input class="form-control" style="width: 300px" type="search" placeholder="Search" aria-label="Search">
+        <input class="form-control" style="box-shadow: none;border: 2px solid black;outline: none; width: 300px" type="search" placeholder="Search" aria-label="Search">
         <div>
             <a href="#" style="text-decoration: none; color:black" class="material-icons">home</a>
             <a href="#" style="text-decoration: none; color:black" class="material-icons">send</a>
@@ -95,7 +95,7 @@
         {% for feed in feeds %}
             <div class="feed_box">
                 <div style="display: flex;flex-direction: row;align-items: center; margin:0 20px; ">
-                    <div class="box" style="width: 50px;height: 50px; margin: 10px 0;">
+                    <div class="box" style="width: 50px;height: 50px; margin: 10px 0;border: 2px solid gray">
                         <img class="profile"
                              src="{{ feed.profile_image }}">
                     </div>
@@ -116,15 +116,15 @@
                         <a href="#" style="text-decoration: none; color:black" class="material-icons-outlined">turned_in_not</a>
                     </div>
                 </div>
-                <div style="padding-top:3px;text-align: left;margin:0 20px; font-size: 14px"> 춘식이
-                    <b>외 {{ feed.like_count }}명</b>이 좋아합니다
+                <div style="padding-top:3px;text-align: left;margin:0 20px; font-size: 14px">
+                    춘식이 <a href="#" style="text-decoration: none; color: black"><b>외 {{ feed.like_count }}명</b></a>이 좋아합니다
                 </div>
                 <div style="padding-top:3px;text-align: left;margin:0 20px; font-size: 16px">
-                    <b>{{ feed.user_id }}</b> {{ feed.content }}</div>
-                <div style="padding-top:3px;text-align: left;margin:0 20px; font-size: 14px"><b>ryan</b> 와 또 혼자갔네</div>
-                <div style="padding-top:3px;text-align: left;margin:0 20px; font-size: 14px"><b>muzi</b> 재용쥐 오랜만!!!
+                    <a href="#" style="text-decoration: none; color: black"><b>{{ feed.user_id }}</b></a> {{ feed.content }}</div>
+                <div style="padding-top:3px;text-align: left;margin:0 20px; font-size: 14px"><a href="#" style="text-decoration: none; color: black"><b>ryan</b></a> 와 또 혼자갔네</div>
+                <div style="padding-top:3px;text-align: left;margin:0 20px; font-size: 14px"><a href="#" style="text-decoration: none; color: black"><b>muzi</b></a> 재용쥐 오랜만!!!
                 </div>
-                <div style="padding-top:3px;border-top: solid 1px gray"><input
+                <div style="padding-top:3px;border-top: solid 2px gray"><input
                         style="box-shadow: none;border: none;outline: none " type="email" class="form-control"
                         placeholder="댓글 달기.."></div>
             </div>
