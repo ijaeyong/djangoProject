@@ -17,9 +17,10 @@
     <title>Welcome jaeyong.G</title>
 
     <style>
-        body{
+        body {
             background-color: #fafafa;
         }
+
         .box {
             width: 150px;
             height: 150px;
@@ -77,8 +78,9 @@
 <nav class="navbar navbar-expand-lg navbar-light bg-light" style="position: fixed;width: 100%">
     <div class="container">
         <a href="#"><img style="height: 30px; object-fit: contain"
-             src="https://www.instagram.com/static/images/web/mobile_nav_type_logo-2x.png/1b47f9d0e595.png"></a>
-        <input class="form-control" style="box-shadow: none;border: 2px solid black;outline: none; width: 300px" type="search" placeholder="Search" aria-label="Search">
+                         src="https://www.instagram.com/static/images/web/mobile_nav_type_logo-2x.png/1b47f9d0e595.png"></a>
+        <input class="form-control" style="box-shadow: none;border: 2px solid black;outline: none; width: 300px"
+               type="search" placeholder="Search" aria-label="Search">
         <div>
             <a href="#" style="text-decoration: none; color:black" class="material-icons">home</a>
             <a href="#" style="text-decoration: none; color:black" class="material-icons">send</a>
@@ -103,7 +105,7 @@
                     </div>
                 </div>
                 <div style="margin: 5px; "><img style="width: 500px;"
-                                               src="{% get_media_prefix %}{{ feed.image }}">
+                                                src="{% get_media_prefix %}{{ feed.image }}">
                 </div>
                 <div style="margin:0 20px; display: flex; justify-content: space-between">
                     <div>
@@ -116,12 +118,20 @@
                     </div>
                 </div>
                 <div style="padding-top:3px;text-align: left;margin:0 20px; font-size: 14px">
-                    춘식이 <a href="#" style="text-decoration: none; color: black"><b>외 {{ feed.like_count }}명</b></a>이 좋아합니다
+                    춘식이 <a href="#" style="text-decoration: none; color: black"><b>외 {{ feed.like_count }}명</b></a>이
+                    좋아합니다
                 </div>
                 <div style="padding-top:3px;text-align: left;margin:0 20px; font-size: 16px">
-                    <a href="#" style="text-decoration: none; color: black"><b>{{ feed.user_id }}</b></a> {{ feed.content }}</div>
-                <div style="padding-top:3px;text-align: left;margin:0 20px; font-size: 14px"><a href="#" style="text-decoration: none; color: black"><b>ryan</b></a> 와 또 혼자갔네</div>
-                <div style="padding-top:3px;text-align: left;margin:0 20px; font-size: 14px"><a href="#" style="text-decoration: none; color: black"><b>muzi</b></a> 재용쥐 오랜만!!!
+                    <a href="#"
+                       style="text-decoration: none; color: black"><b>{{ feed.user_id }}</b></a> {{ feed.content }}
+                </div>
+                <div style="padding-top:3px;text-align: left;margin:0 20px; font-size: 14px"><a href="#"
+                                                                                                style="text-decoration: none; color: black"><b>ryan</b></a>
+                    와 또 혼자갔네
+                </div>
+                <div style="padding-top:3px;text-align: left;margin:0 20px; font-size: 14px"><a href="#"
+                                                                                                style="text-decoration: none; color: black"><b>muzi</b></a>
+                    재용쥐 오랜만!!!
                 </div>
                 <div style="padding-top:3px;border-top: solid 2px gray"><input
                         style="box-shadow: none;border: none;outline: none " type="email" class="form-control"
@@ -239,7 +249,8 @@
         <div style="display: flex; flex-direction: row; justify-content: space-between">
             <div style="width: 40px;"></div>
             <div> 새 이미지 업로드</div>
-            <div style="width: 40px;"><a href="#" style="text-decoration: none; color: black"><span class="material-icons-outlined">close</span></a></div>
+            <div style="width: 40px;"><a href="#" style="text-decoration: none; color: black"><span
+                    class="material-icons-outlined">close</span></a></div>
         </div>
 
         <div class="img_upload_space" style="border:solid 1px gray;width: 778px; height: 540px; margin-top: 10px">
@@ -261,7 +272,9 @@
             </div>
             <div style="border-left: solid 1px gray">
                 <div>
-                    <textarea id="input_feed_content" class="form-control" style="width: 276px;height: 400px; box-shadow: none; border: none; outline: none; padding-left: 15px"id="exampleFormControlTextarea1" rows="5" placeholder="내용을 적으세요!"></textarea>
+                    <textarea id="input_feed_content" class="form-control"
+                              style="width: 276px;height: 400px; box-shadow: none; border: none; outline: none; padding-left: 15px"
+                              id="exampleFormControlTextarea1" rows="5" placeholder="내용을 적으세요!"></textarea>
                 </div>
                 <button id="feed_create_button" type="button" class="btn btn-primary" style="width: 100%;">공유하기</button>
             </div>
@@ -287,7 +300,7 @@
         });
     });
 
-    $('#feed_create_button').click(function (){
+    $('#feed_create_button').click(function () {
         alert('공유' + files[0].name)
 
         let file = files[0];
@@ -311,13 +324,13 @@
             method: "POST",
             processData: false,
             contentType: false,
-            success: function (data){
+            success: function (data) {
                 console.log('성공');
             },
-            error: function (request, status, error){
+            error: function (request, status, error) {
                 console.log("에러")
             },
-            complete: function (){
+            complete: function () {
                 console.log("완료")
                 location.replace("/main");
             }
