@@ -75,6 +75,7 @@
     </style>
 </head>
 <body>
+<!-- 상단 메뉴바 -->
 <nav class="navbar navbar-expand-lg navbar-light bg-light" style="position: fixed;width: 100%">
     <div class="container">
         <a href="#"><img style="height: 30px; object-fit: contain"
@@ -90,9 +91,9 @@
         </div>
     </div>
 </nav>
+        <!-- 여기서 부터 피드 박스 -->
 <div style="display: flex; flex-direction: row; text-align: center; justify-content: center; padding-top: 60px; ">
     <div style="min-width: 500px; height: 1000px; margin-right: 300px; ">
-        <!-- 여기서 부터 피드 박스 -->
         {% for feed in feeds %}
             <div class="feed_box">
                 <div style="display: flex;flex-direction: row;align-items: center; margin:0 20px; ">
@@ -138,8 +139,8 @@
                         placeholder="댓글 달기.."></div>
             </div>
         {% endfor %}
-        <!-- 여기 까지 피드 박스 -->
     </div>
+        <!-- 여기 까지 피드 박스 -->
 
     <div style="width: 400px; height: 1000px; position: fixed; left: 62%">
         <div>
